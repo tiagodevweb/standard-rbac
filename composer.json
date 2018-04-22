@@ -1,0 +1,15 @@
+{
+    "name": "tdw/standard-rbac",
+    "description": "Simple standard for role based access control.",
+    "authors": [
+        {
+            "name": "Tiago Lopes",
+            "email": "tiago.desenvolvedorweb@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Tdw\\Standard\\RBAC\\": "src/"
+        }
+    }
+}
