@@ -7,6 +7,9 @@
             "email": "tiago.desenvolvedorweb@gmail.com"
         }
     ],
+    "require": {
+        "php": ">=5.6"
+    },
     "autoload": {
         "psr-4": {
             "Tdw\\Standard\\RBAC\\": "src/"

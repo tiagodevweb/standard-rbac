@@ -5,22 +5,34 @@ namespace Tdw\Standard\RBAC;
 interface Role
 {
     /**
-     * @param User|string $user
-     * @return self
-     */
-    public function assignUser($user);
-
-    /**
      * @param Permission|string $permission
      * @return self
      */
     public function assignPermission($permission);
 
     /**
-     * @param User|string $user
-     * @return bool
+     * @param Permission[]|string[] $permissions
+     * @return self
      */
-    public function hasUser($user);
+    public function assignPermissions(array $permissions);
+
+    /**
+     * @param Permission|string $permission
+     * @return self
+     */
+    public function revokePermission($permission);
+
+    /**
+     * @param Permission[]|string[] $permissions
+     * @return self
+     */
+    public function revokePermissions(array $permissions);
+
+    /**
+     * @param Permission[]|string[] $permissions
+     * @return self
+     */
+    public function syncPermissions(array $permissions);
 
     /**
      * @param Permission|string $permission
@@ -29,12 +41,7 @@ interface Role
     public function hasPermission($permission);
 
     /**
-     * @return Collection
-     */
-    public function users();
-
-    /**
-     * @return Collection
+     * @return mixed
      */
     public function permissions();
 }

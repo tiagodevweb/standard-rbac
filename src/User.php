@@ -8,13 +8,13 @@ interface User
      * @param Role|string $role
      * @return self
      */
-    public function assignRole($role);
+    public function attachRole($role);
 
     /**
-     * @param Permission|string $permission
+     * @param Role|string $role
      * @return self
      */
-    public function assignPermission($permission);
+    public function detachRole($role);
 
     /**
      * @param Role|string $role
@@ -23,18 +23,7 @@ interface User
     public function hasRole($role);
 
     /**
-     * @param Permission|string $permission
-     * @return bool
-     */
-    public function hasPermission($permission);
-
-    /**
-     * @return Collection
+     * @return mixed
      */
     public function roles();
-
-    /**
-     * @return Collection
-     */
-    public function permissions();
 }
